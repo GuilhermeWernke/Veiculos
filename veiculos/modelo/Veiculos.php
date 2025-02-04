@@ -1,37 +1,29 @@
 <?php
     
-    class Veiculos
+    abstract class Veiculos
     {
         
         // Atributos
         
-        private $marca;
-        private $modelo;
-        private $ano;
-        private $motor;
+        protected int $id;
+        
+        protected string $marca;
+        protected string $modelo;
+        protected int $ano;
+        protected string $motor;
+        protected int $cilindrada;
+        protected int $hp;
         
         // Métodos
         
-        // nada ainda
+        public abstract function getTipo();
         
         // ToString
         
         public function __toString()
         {
             
-            return "O Modelo: " . $this->modelo . " da Marca: " . $this->marca . " do Ano: " . $this->ano . " tem um Motor: " . $this->motor;
-            
-        }
-        
-        // Construtor
-        
-        public function __construct($marca, $modelo, $ano, $motor, $tracao) 
-        {
-            
-            $this->marca = $marca;
-            $this->modelo = $modelo;
-            $this->ano = $ano;
-            $this->motor = $motor;
+            return " ID: " . $this->id . "\n Marca: " . $this->marca . "\n Modelo: " . $this->modelo . "\n Ano: " . $this->ano . "\n Motor: " . $this->motor . "\n Cilindradas: " . $this->cilindrada . "\n Cavalos: " . $this->hp;
             
         }
         
@@ -126,27 +118,72 @@
             
         }
         
+        
         /**
-         * Get the value of tracao
+         * Get the value of cilindrada
          */
-        public function getTracao()
+        public function getCilindrada()
         {
             
-            return $this->tracao;
+            return $this->cilindrada;
             
         }
         
         /**
-         * Set the value of tracao
+         * Set the value of cilindrada
          */
-        public function setTracao($tracao): self
+        public function setCilindrada($cilindrada): self
         {
             
-            $this->tracao = $tracao;
+            $this->cilindrada = $cilindrada;
             
             return $this;
             
-        }   
+        }
+        
+        /**
+         * Get the value of hp
+         */
+        public function getHp()
+        {
+            
+            return $this->hp;
+            
+        }
+        
+        /**
+         * Set the value of hp
+         */
+        public function setHp($potencia): self
+        {
+            
+            $this->hp = $potencia;
+            
+            return $this;
+            
+        }
+        
+        /**
+         * Get the value of id
+         */
+        public function getId(): int
+        {
+            
+            return $this->id;
+            
+        }
+        
+        /**
+         * Set the value of id
+         */
+        public function setId(int $id): self
+        {
+            
+            $this->id = $id;
+            
+            return $this;
+            
+        }
         
     }
     
