@@ -23,7 +23,7 @@
         public function __toString()
         {
             
-            return parent::__toString() . "\n Cor: " . $this->cor;
+            return parent::__toString() . "\n COR: " . $this->cor;
             
         }
         

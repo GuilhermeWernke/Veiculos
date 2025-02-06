@@ -23,7 +23,7 @@
         public function __toString()
         {
             
-            return " ID: " . $this->id . "\n Marca: " . $this->marca . "\n Modelo: " . $this->modelo . "\n Ano: " . $this->ano . "\n Motor: " . $this->motor . "\n Cilindradas: " . $this->cilindrada . "\n Cavalos: " . $this->hp;
+            return " ID: " . $this->id . "\n MARCA: " . $this->marca . "\n MODELO: " . $this->modelo . "\n ANO: " . $this->ano . "\n MOTOR: " . $this->motor . "\n CILINDRADAS: " . $this->cilindrada . "\n CAVALOS: " . $this->hp;
             
         }
         

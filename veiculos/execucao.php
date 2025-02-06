@@ -10,23 +10,35 @@
     do
     {
         
-        print("\033[1;44m ╔══════════════════╣\033[m  Cadastro de Veículos  \033[1;44m╠═════════════════╗ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                     Escolha uma opção:                    \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                     1- Cadastrar Carro                    \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                     2- Cadastrar Moto                     \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                    3- Listar Veículos                     \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                     4- Buscar Veículo                     \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                    5- Excluir Veículo                     \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                          0- Sair                          \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
-        print("\033[1;44m ╚═════════════════════════════════════════════════════════════╝ \033[m \n");
+        echo "\033[1;44m ╔══════════════════════════════════════════════╗ \033[m\n";
+        echo "\033[1;44m ║ \033[m          🚗 CADASTRO DE VEÍCULO 🏍️          \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ╠══════════════════════════════════════════════╣ \033[m\n";
+        echo "\033[1;44m ║ \033[m 1 - CADASTRO DE CARRO                      \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ║ \033[m 2 - CADASTRO DE MOTO                       \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ║ \033[m 3 - LISTAR VEÍCULOS                        \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ║ \033[m 4 - BUSCAR UM VEÍCULO                      \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ║ \033[m 5 - EXCLUIR UM VEÍCULO                     \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ║ \033[m 0 - SAIR                                   \033[1;44m ║ \033[m\n";
+        echo "\033[1;44m ╚══════════════════════════════════════════════╝ \033[m\n";
+        
+        //outra possivel opção de menu, 
+        // print("\033[1;44m ╔══════════════════╣\033[m  Cadastro de Veículos  \033[1;44m╠═════════════════╗ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                     Escolha uma opção:                    \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                     1- Cadastrar Carro                    \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                     2- Cadastrar Moto                     \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                    3- Listar Veículos                     \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                     4- Buscar Veículo                     \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                    5- Excluir Veículo                     \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                          0- Sair                          \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ║ \033[m                                                           \033[1;44m ║ \033[m \n");
+        // print("\033[1;44m ╚═════════════════════════════════════════════════════════════╝ \033[m \n");
         $opcao = readline();
         system("clear");
         
@@ -36,25 +48,25 @@
             case 1:
                 
                 $carro = new Carro();
-                $carro->setMarca(readline("Informe a marca: "));
+                $carro->setMarca(readline("INFORME A MARCA : "));
                 system("clear");
                 
-                $carro->setModelo(readline("Informe o modelo: "));
+                $carro->setModelo(readline("INFORME O MODELO : "));
                 system("clear");
                 
-                $carro->setAno(readline("Informe o ano: "));
+                $carro->setAno(readline("INFORME O MOTOR : "));
                 system("clear");
                 
-                $carro->setMotor(readline("Informe o motor: "));
+                $carro->setMotor(readline("INFORME O MOTOR : "));
                 system("clear");
                 
-                $carro->setTracao(readline("Informe a tração: "));
+                $carro->setTracao(readline("INFORME A TRAÇÃO : "));
                 system("clear");
                 
-                $carro->setCilindrada(readline("Informe a cilindrada: "));
+                $carro->setCilindrada(readline("INFORME A CILINDRADA : "));
                 system("clear");
                 
-                $carro->setHp(readline("Informe os HP: "));
+                $carro->setHp(readline("INFORME A POTÊNCIA (HPs): "));
                 system("clear");
                 
                 $VeiculosDAO = new VeiculosDAO();
@@ -62,8 +74,8 @@
                 
                 
                 
-                print("Carro inserido com sucesso! \n");
-                readline("Pressione Enter para continuar...");
+                print("CARRO CADASTRADO COM SUCESSO ! \n");
+                readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
             break;
@@ -71,32 +83,32 @@
             case 2:
                 
                 $moto = new Moto();
-                $moto->setMarca(readline("Informe a marca: "));
+                $moto->setMarca(readline("INFORME A MARCA : "));
                 system("clear");
                 
-                $moto->setModelo(readline("Informe o modelo: "));
+                $moto->setModelo(readline("INFORME O MODELO : "));
                 system("clear");
                 
-                $moto->setAno(readline("Informe o ano: "));
+                $moto->setAno(readline("INFORME O ANO : "));
                 system("clear");
                 
-                $moto->setMotor(readline("Informe o motor: "));
+                $moto->setMotor(readline("INFORME O MOTOR : "));
                 system("clear");
                 
-                $moto->setCilindrada(readline("Informe a cilindrada: "));
+                $moto->setCilindrada(readline("INFORME A CILINDRADA : "));
                 system("clear");
                 
-                $moto->setHp(readline("Informe os HP: "));
+                $moto->setHp(readline("INFORME A POTÊNCIA (HPs) : "));
                 system("clear");
                 
-                $moto->setCor(readline("Informe a cor: "));
+                $moto->setCor(readline("INFORME A COR : "));
                 system("clear");
                 
                 $VeiculosDAO = new VeiculosDAO();
                 $VeiculosDAO->inserirVeiculo($moto);
                 
-                print("Moto inserido com sucesso! \n");
-                readline("Pressione Enter para continuar...");
+                print("MOTO CADASTRADA COM SUCESSO ! \n");
+                readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
             break;
@@ -105,11 +117,11 @@
                 
                 $veiculoDAO = new VeiculosDAO();
                 
-                print("Veículos Cadastrados: \n\n");
+                print("VEÍCULOS CADASTRADOS : \n\n");
                 
                 $veiculoDAO->listarVeiculos();
                 
-                readline("Pressione Enter para continuar...");
+                readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
             break;
@@ -118,9 +130,9 @@
                 
                 $veiculoDAO = new VeiculosDAO();
                 
-                print($veiculoDAO->buscarVeiculoPorId(readline("Informe o ID do veiculo: ")));
+                print($veiculoDAO->buscarVeiculoPorId(readline("INFORME O ID DO VEÍCULO : ")));
                 
-                readline("Pressione Enter para continuar...");
+                readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
             break;
@@ -129,10 +141,10 @@
                 
                 $veiculoDAO = new VeiculosDAO();
                 
-                $veiculoDAO->excluirVeiculo(readline("Informe o ID do veiculo: "));
+                $veiculoDAO->excluirVeiculo(readline("INFORME O ID DO VEÍCULO : "));
                 
-                print("Veiculo excluído com sucesso! \n");
-                readline("Pressione Enter para continuar...");
+                print("VEÍCULO EXCLUIDO COM SUCESSO ! \n");
+                readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
             break;
@@ -141,7 +153,7 @@
                 
                 system("clear");
                 
-                print("Salvando Alterações... \n");
+                print("SALVANDO ALTERAÇÕES ... \n");
                 sleep(rand(1, 3));
                 
                 system("clear");
@@ -150,9 +162,9 @@
             
             default:
                 
-                print ("Valor informado errado! \n");
+                print ("O VALOR INFORMADO FOI INVALIDADO ! \n");
                 
-                readline("Pressione Enter para continuar...");
+                readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
             break;
