@@ -75,11 +75,9 @@
                 
                 system("clear");
                 
-                return "Veiculo não encontrado!\n";
+                return [];
                 
             }
-            
-            $veiculo = NULL;
             
             if($registro["tipo"] == "M")
             {
@@ -109,6 +107,7 @@
                 $veiculo->setTracao($registro["tracao"]);
                 
             }
+            
             return $veiculo;
             
         }
@@ -124,17 +123,14 @@
             $stm->execute();
             $registros = $stm->fetchAll();            
             
-            foreach ($this->mapVeiculos($registros) as $veiculo)
-            {
-                
-                print($veiculo . "\n\n");
-                
-            }
+            return $this->mapVeiculos($registros);
             
         }
         
         public function excluirVeiculo(int $id)
         {
+            
+            
             
             $con = Conexao::getCon();
             

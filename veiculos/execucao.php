@@ -54,7 +54,7 @@
                 $carro->setModelo(readline("INFORME O MODELO : "));
                 system("clear");
                 
-                $carro->setAno(readline("INFORME O MOTOR : "));
+                $carro->setAno(readline("INFORME O ANO : "));
                 system("clear");
                 
                 $carro->setMotor(readline("INFORME O MOTOR : "));
@@ -119,7 +119,14 @@
                 
                 print("VEÍCULOS CADASTRADOS : \n\n");
                 
-                $veiculoDAO->listarVeiculos();
+                $veiculos = $veiculoDAO->listarVeiculos();
+                
+                foreach ($veiculos as $veiculo)
+                {
+                    
+                    print($veiculo . "\n\n");
+                    
+                }
                 
                 readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
@@ -130,7 +137,35 @@
                 
                 $veiculoDAO = new VeiculosDAO();
                 
-                print($veiculoDAO->buscarVeiculoPorId(readline("INFORME O ID DO VEÍCULO : ")));
+                print("VEÍCULOS CADASTRADOS : \n\n");
+                
+                $veiculos = $veiculoDAO->listarVeiculos();
+                
+                if(count($veiculos) <= 0)
+                {
+                    
+                    print("NENHUM VEÍCULO CADASTRADO ! \n");
+                    readline("PRESSIONE ENTER PARA CONTINUAR ... ");
+                    system("clear");
+                    break;
+                    
+                }
+                else
+                {
+                    
+                    print("VEÍCULOS CADASTRADOS : \n\n");
+                    
+                    
+                    foreach ($veiculos as $veiculo)
+                    {
+                        
+                        print($veiculo . "\n\n");
+                        
+                    }
+                    
+                }
+                
+                print($veiculoDAO->buscarVeiculoPorId(readline("INFORME O ID DO VEÍCULO QUE DESEJA BUSCAR : ")));
                 
                 readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
@@ -141,9 +176,35 @@
                 
                 $veiculoDAO = new VeiculosDAO();
                 
-                $veiculoDAO->excluirVeiculo(readline("INFORME O ID DO VEÍCULO : "));
+                print("VEÍCULOS CADASTRADOS : \n\n");
                 
-                print("VEÍCULO EXCLUIDO COM SUCESSO ! \n");
+                $veiculos = $veiculoDAO->listarVeiculos();
+                
+                foreach ($veiculos as $veiculo)
+                {
+                    
+                    print($veiculo . "\n\n");
+                    
+                }
+                
+                $id = readline("INFORME O ID DO VEÍCULO PARA EXCLUIR : ");
+                $veiculo = $veiculoDAO ->buscarVeiculoPorId($id);
+                
+                if(empty($veiculo))
+                {
+                    
+                    print("VEÍCULO NÃO ENCONTRADO ! \n");
+                    
+                }
+                else
+                {
+                    
+                    $veiculo = $veiculoDAO->excluirVeiculo($id);
+                    
+                    print("VEÍCULO EXCLUIDO COM SUCESSO ! \n");
+                    
+                }
+                
                 readline("PRESSIONE ENTER PARA CONTINUAR ... ");
                 system("clear");
                 
